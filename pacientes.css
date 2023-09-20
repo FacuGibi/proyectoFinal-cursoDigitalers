@@ -5,13 +5,13 @@
   overflow: hidden;
 }
 
-body {
-  background-color: #080838;
-}
-
 header {
   margin-left: -12px;
   width: 105%;
+}
+
+body {
+  background-color: #080838;
 }
 
 main {
@@ -23,7 +23,7 @@ main {
   color: white;
 }
 
-#divTurnos {
+#divPacientes {
   background-color: #202085;
   height: 300px;
   width: 100%;
@@ -31,7 +31,6 @@ main {
   text-align: center;
   border-radius: 20px;
 }
-
 
 .btnAgregar {
   margin: 5px;

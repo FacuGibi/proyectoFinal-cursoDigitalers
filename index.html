@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/Styles/index.css" />
-    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="/JavaScript/app.js" ></script>
   </head>
   <body>
     <div class="container-fluid">
       <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-sm nav-underline" style="background-color: #ffffff; font-weight: bold; font-variant: small-caps;">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">
+              <img src="/Assets/logo.png" alt="Bootstrap" width="100">
+            </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -34,17 +37,19 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a
-                    class="nav-link active"
+                    class="nav-link"
+                    style="color: lightblue;"
                     aria-current="page"
                     href="index.html"
                     >Turnos</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pacientes.html">Pacientes</a>
+                  <a class="nav-link" style="color: lightblue;" href="pacientes.html">Pacientes</a>
                 </li>
               </ul>
-              <form class="d-flex" role="search">
+              <!--
+                <form class="d-flex" role="search">
                 <input
                   class="form-control me-2"
                   type="search"
@@ -55,6 +60,7 @@
                   Search
                 </button>
               </form>
+              -->
             </div>
           </div>
         </nav>
@@ -62,10 +68,13 @@
 
       <main>
         <h2>Turnos</h2>
-        <div id="divTurnos"></div>
-        <div>
-            
-          <button type="button" data-bs-toggle="modal" data-bs-target="#modalTurnos" onclick="">Agregar</button>
+        <div id="divTurnos">
+          <p>Aqui se mostraran los turnos agendados en la DB <br>
+          con sus respectivos botones para modificar o eliminar el turno</p>
+        </div>
+        <div class="btnAgregar">
+          <button
+          class="btn btn-outline-warning" type="button" data-bs-toggle="modal" data-bs-target="#modalTurnos" onclick=""><i class="bi bi-calendar-plus"></i></i></button>
         </div>
 
 
@@ -89,13 +98,14 @@
                       <div class="form-floating">
                         <select class="form-select" id="floatingPaciente" aria-label="Floating label select example">
                           <option selected>Selecciona el Paciente</option>
+                          <option >Aqui se mostrara la lista de pacientes de la BD</option>
                         </select>
                         <label for="floatingPaciente">Paciente</label>
                       </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Agendar</button>
+                  <button type="button" class="btn btn-primary" onclick="agendarTurno()">Agendar</button>
                 </div>
               </div>
             </div>
