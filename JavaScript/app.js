@@ -1,5 +1,4 @@
 
-
 function agendarTurno() {
     alert("Se agendará el turno en la DB");
 }
