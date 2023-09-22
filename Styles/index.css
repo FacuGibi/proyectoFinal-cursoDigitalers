@@ -2,16 +2,17 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
-  background-color: #080838;
+  background-color: #56BAD8;
 }
 
 header {
-  margin-left: -12px;
-  width: 105%;
+  margin-left: -13px;
+  width: 110%;
 }
 
 main {
@@ -20,18 +21,19 @@ main {
   justify-content: space-evenly;
   align-items: center;
   margin: 20px 0px;
-  color: white;
+  color: #080838;
 }
 
 #divTurnos {
-  background-color: #202085;
+  background-color: #C9ECF4;
   height: 300px;
   width: 100%;
   align-items: center;
   text-align: center;
   border-radius: 20px;
+  color: #080838;
+  padding: 15px 5px;
 }
-
 
 .btnAgregar {
   margin: 5px;
@@ -46,9 +48,17 @@ main {
 
 .bi {
   font-size: 50px;
-  color: white;
+  color: #080838;
 }
 
 h1{
   color: black;
+}
+
+h2{
+  overflow: hidden;
+}
+
+.modal{
+  modal-bg: black;
 }
